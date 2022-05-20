@@ -87,22 +87,18 @@ public final class SuperHeroeServiceImpl implements SuperHeroService {
 	}
 
 	@Override
-	public boolean deleteById(Integer id) {
-		
-		boolean isDeleted = false;
+	public Integer deleteById(Integer id) {
 		
 		if(id != null) {
 			
 			repo.deleteById(id);
-			
-			isDeleted = true;
 			
 		} else {
 			
 			throw new IllegalArgumentException(Constants.ID_MUST_NOT_BE_NULL);
 		}
 		
-		return isDeleted;
+		return id;
 	}
 
 	@Override

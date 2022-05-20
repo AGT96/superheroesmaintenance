@@ -9,6 +9,4 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan("com.agt.mantenimientosuperheroes")
-public class SpringConfig {
-
-}
+public class SpringConfig {}

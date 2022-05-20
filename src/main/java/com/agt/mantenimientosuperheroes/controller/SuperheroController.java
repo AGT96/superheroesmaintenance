@@ -360,26 +360,20 @@ public class SuperheroController {
 	public ResponseEntity<ResponseMessage> deleteSuperHeroById(@PathVariable("id") Integer id) {
 		
 		LOGGER.info("Entering deleteSuperHeroById method...");
-
+		
 		ResponseMessage resMsg;
 		HttpStatus httpStatus;
 
 		try {
 
-			boolean isDeleted = service.deleteById(id);
-
-			if (isDeleted) {
+			Integer idFromEntityDelete = service.deleteById(id);
 				
-				resMsg = MessageGenerator.generateMessage(Constants.SUCCESS_MESSAGE, id.toString(), new ArrayList<>());
+			resMsg = MessageGenerator.generateMessage(Constants.SUCCESS_MESSAGE, id.toString(), idFromEntityDelete);
 
-				httpStatus = HttpStatus.OK;
+			httpStatus = HttpStatus.OK;
 
-				LOGGER.info("Superhero deleted successfully");
+			LOGGER.info("Superhero deleted successfully");
 				
-			} else {
-				
-				throw new IllegalArgumentException(Constants.INVALID_ID);
-			}
 
 		} catch (Exception e) {
 			
@@ -430,5 +424,4 @@ public class SuperheroController {
 
 		return MessageGenerator.showResponse(resMsg, httpStatus);
 	}
-
 }

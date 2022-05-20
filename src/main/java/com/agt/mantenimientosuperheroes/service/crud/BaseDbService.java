@@ -48,10 +48,9 @@ public interface BaseDbService <E extends BaseEntity, D extends BaseDto> {
 	 * Deletes a existing entity from the database.
 	 * 
 	 * @param id the entity id to be deleted.
-	 * @return true if the operation was completed successfully, otherwise false.
-	 * @throws IllegalArgumentException if the id is null.
+	 * @return the id of the delete entity.
 	 */
-	boolean deleteById(Integer id) throws IllegalArgumentException;
+	Integer deleteById(Integer id);
 	
 	/**
 	 * Deletes all content from the database.
