@@ -1,4 +1,4 @@
-package com.agt.mantenimientosuperheroes.data.dto;
+package com.agt.mantenimientosuperheroes.service.data.dto;
 
 /**
  * Base class of all DTOS.

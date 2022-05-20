@@ -2,8 +2,8 @@ package com.agt.mantenimientosuperheroes.service.crud;
 
 import java.util.List;
 
-import com.agt.mantenimientosuperheroes.data.dto.BaseDto;
-import com.agt.mantenimientosuperheroes.data.entities.BaseEntity;
+import com.agt.mantenimientosuperheroes.service.data.dto.BaseDto;
+import com.agt.mantenimientosuperheroes.service.data.entities.BaseEntity;
 
 /**
  * Base methods to implement services to manage data in sqlite.

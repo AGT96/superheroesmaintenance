@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.agt.mantenimientosuperheroes.data.dto.ResponseMessage;
-import com.agt.mantenimientosuperheroes.data.dto.SuperHeroeDto;
+import com.agt.mantenimientosuperheroes.service.data.dto.ResponseMessage;
+import com.agt.mantenimientosuperheroes.service.data.dto.SuperHeroDto;
 
 
 /**
@@ -28,7 +28,7 @@ public final class MessageGenerator {
 	 * @param bookLst the {@link List} of {@link BookDto} to show in the {@link ResponseEntity}.
 	 * @return the {@link ResponseMessage} with the given parameters.
 	 */
-	public static ResponseMessage generateMessage(String message, String optionalParameter, List<SuperHeroeDto> superheroesDtoLst) {
+	public static ResponseMessage generateMessage(String message, String optionalParameter, List<SuperHeroDto> superheroesDtoLst) {
 		return new ResponseMessage(message, optionalParameter, superheroesDtoLst);
 	}
 	

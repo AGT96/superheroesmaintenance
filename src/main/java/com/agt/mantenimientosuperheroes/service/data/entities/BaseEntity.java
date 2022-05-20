@@ -1,4 +1,4 @@
-package com.agt.mantenimientosuperheroes.data.entities;
+package com.agt.mantenimientosuperheroes.service.data.entities;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

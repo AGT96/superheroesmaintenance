@@ -1,16 +1,16 @@
-package com.agt.mantenimientosuperheroes.data.entities;
+package com.agt.mantenimientosuperheroes.service.data.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * The {@link SuperHeroe} class represents the table and records of the superheroes table.
+ * The {@link SuperHero} class represents the table and records of the superheroes table.
  * @author AGT96
  */
 @Entity
 @Table(name = "superheroes")
-public final class SuperHeroe extends BaseEntity {
+public final class SuperHero extends BaseEntity {
 	
 	@Column(name = "name", nullable = false)
 	private String name;
@@ -25,20 +25,20 @@ public final class SuperHeroe extends BaseEntity {
 	private Integer comics;
 	
 	/**
-	 * Creates a new {@link SuperHeroe} instance.
+	 * Creates a new {@link SuperHero} instance.
 	 */
-	public SuperHeroe() {}
+	public SuperHero() {}
 	
 	/**
-	 * Creates a new {@link SuperHeroe} instance with a id, name, powers
+	 * Creates a new {@link SuperHero} instance with a id, name, powers
 	 * company and comics.
 	 * @param id the id of this entity, can be null to auto generate it.
-	 * @param name the name of the {@link SuperHeroe}.
-	 * @param powers the powers of the {@link SuperHeroe}
-	 * @param company the company of the {@link SuperHeroe}.
-	 * @param comics if the {@link SuperHeroe} have comics. Can be 1 (true) or false (0).
+	 * @param name the name of the {@link SuperHero}.
+	 * @param powers the powers of the {@link SuperHero}
+	 * @param company the company of the {@link SuperHero}.
+	 * @param comics if the {@link SuperHero} have comics. Can be 1 (true) or false (0).
 	 */
-	public SuperHeroe(Integer id, String name, String powers, String company, Integer comics) {
+	public SuperHero(Integer id, String name, String powers, String company, Integer comics) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -85,6 +85,6 @@ public final class SuperHeroe extends BaseEntity {
 
 	@Override
 	public String toString() {
-		return "SuperHeroe: name = " + name + ", powers = " + powers + ", company = " + company + ", comics = " + comics;
+		return "SuperHero: name = " + name + ", powers = " + powers + ", company = " + company + ", comics = " + comics;
 	}
 }

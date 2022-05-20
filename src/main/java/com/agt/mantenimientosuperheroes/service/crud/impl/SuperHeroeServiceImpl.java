@@ -8,12 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
-import com.agt.mantenimientosuperheroes.data.dto.SuperHeroeDto;
-import com.agt.mantenimientosuperheroes.data.entities.SuperHeroe;
+import com.agt.mantenimientosuperheroes.service.data.dto.SuperHeroDto;
+import com.agt.mantenimientosuperheroes.service.data.entities.SuperHero;
 
 import static com.agt.mantenimientosuperheroes.service.mappers.SuperHeroesMapper.SUPER_HEROE_MAPPER_INSTANCE;
 
 import com.agt.mantenimientosuperheroes.service.crud.BaseDbService;
+import com.agt.mantenimientosuperheroes.service.crud.definition.SuperHeroService;
 import com.agt.mantenimientosuperheroes.service.repository.SuperHeroeRepository;
 
 import com.agt.mantenimientosuperheroes.util.Constants;
@@ -23,15 +24,15 @@ import com.agt.mantenimientosuperheroes.util.Constants;
  * @author AGT96
  */
 @Service
-public final class SuperHeroeServiceImpl implements BaseDbService<SuperHeroe, SuperHeroeDto> {
+public final class SuperHeroeServiceImpl implements SuperHeroService {
 	
 	@Autowired
 	SuperHeroeRepository repo;
 
 	@Override
-	public List<SuperHeroeDto> getAllContent() {
+	public List<SuperHeroDto> getAllContent() {
 		
-		List<SuperHeroeDto> dtoLst = new ArrayList<>();
+		List<SuperHeroDto> dtoLst = new ArrayList<>();
 		
 		var entityLst = repo.findAll();
 		
@@ -41,25 +42,25 @@ public final class SuperHeroeServiceImpl implements BaseDbService<SuperHeroe, Su
 	}
 	
 	@Override
-	public SuperHeroeDto getById(Integer id) {
+	public SuperHeroDto getById(Integer id) {
 		
 		return SUPER_HEROE_MAPPER_INSTANCE.toDto(repo.getReferenceById(id));
 	}
 
 	@Override
-	public Integer save(SuperHeroe entity) {
+	public Integer save(SuperHero entity) {
 		
-		SuperHeroe entitySaved = repo.save(entity);
+		SuperHero entitySaved = repo.save(entity);
 		
 		return entitySaved.getId();
 	}
 
 	@Override
-	public Integer update(SuperHeroe entity) {
+	public Integer update(SuperHero entity) {
 		
-		SuperHeroe entityUpdated = null;
+		SuperHero entityUpdated = null;
 		
-		SuperHeroe entityFromDb = repo.getReferenceById(entity.getId());
+		SuperHero entityFromDb = repo.getReferenceById(entity.getId());
 		
 		if(entityFromDb != null) {
 			

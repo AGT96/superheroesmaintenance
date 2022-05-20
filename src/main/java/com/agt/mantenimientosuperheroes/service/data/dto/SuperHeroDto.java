@@ -1,13 +1,11 @@
-package com.agt.mantenimientosuperheroes.data.dto;
-
-import com.agt.mantenimientosuperheroes.data.entities.SuperHeroe;
+package com.agt.mantenimientosuperheroes.service.data.dto;
 
 /**
- * The {@link SuperHeroeDto} data transfer dto, used to show and create their {@link SuperHeroe} entities to save, update, delete in
+ * The {@link SuperHeroDto} data transfer dto, used to show and create their SuperHero entities to save, update, delete in
  * the database.
  * @author AGT96
  */
-public final class SuperHeroeDto extends BaseDto {
+public final class SuperHeroDto extends BaseDto {
 	
 	private String name;
 	
@@ -18,20 +16,20 @@ public final class SuperHeroeDto extends BaseDto {
 	private Integer comics;
 	
 	/**
-	 * Creates a new {@link SuperHeroeDto} instance.
+	 * Creates a new {@link SuperHeroDto} instance.
 	 */
-	public SuperHeroeDto() {}
+	public SuperHeroDto() {}
 	
 	/**
-	 * Creates a new {@link SuperHeroeDto} instance with a id, name, powers
+	 * Creates a new {@link SuperHeroDto} instance with a id, name, powers
 	 * company and comics.
 	 * @param id the id of this entity, can be null to auto generate it.
-	 * @param name the name of the {@link SuperHeroeDto}.
-	 * @param powers the powers of the {@link SuperHeroeDto}
-	 * @param company the company of the {@link SuperHeroeDto}.
-	 * @param comics if the {@link SuperHeroeDto} have comics. Can be 1 (true) or false (0).
+	 * @param name the name of the {@link SuperHeroDto}.
+	 * @param powers the powers of the {@link SuperHeroDto}
+	 * @param company the company of the {@link SuperHeroDto}.
+	 * @param comics if the {@link SuperHeroDto} have comics. Can be 1 (true) or false (0).
 	 */
-	public SuperHeroeDto(Integer id, String name, String powers, String company, Integer comics) {
+	public SuperHeroDto(Integer id, String name, String powers, String company, Integer comics) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -78,6 +76,6 @@ public final class SuperHeroeDto extends BaseDto {
 	
 	@Override
 	public String toString() {
-		return "SuperHeroeDto: name = " + name + ", powers = " + powers + ", company = " + company + ", comics = " + comics;
+		return "SuperHeroDto: name = " + name + ", powers = " + powers + ", company = " + company + ", comics = " + comics;
 	}
 }

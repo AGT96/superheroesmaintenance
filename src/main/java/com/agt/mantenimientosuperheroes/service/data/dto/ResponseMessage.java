@@ -1,4 +1,4 @@
-package com.agt.mantenimientosuperheroes.data.dto;
+package com.agt.mantenimientosuperheroes.service.data.dto;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ public class ResponseMessage {
 	
 	private String optionalParameter;
 	
-	private List<SuperHeroeDto> items;
+	private List<SuperHeroDto> items;
 	
-	public ResponseMessage(String message, String optionalParameter, List<SuperHeroeDto> superheroeDtoLst) {
+	public ResponseMessage(String message, String optionalParameter, List<SuperHeroDto> superheroeDtoLst) {
 		this.message = message;
 		this.optionalParameter = optionalParameter;
 		this.items = superheroeDtoLst;
@@ -37,11 +37,11 @@ public class ResponseMessage {
 		this.optionalParameter = optionalParameter;
 	}
 
-	public List<SuperHeroeDto> getBookLst() {
+	public List<SuperHeroDto> getBookLst() {
 		return items;
 	}
 
-	public void setBookLst(List<SuperHeroeDto> superheroeDtoLst) {
+	public void setBookLst(List<SuperHeroDto> superheroeDtoLst) {
 		this.items = superheroeDtoLst;
 	}
 

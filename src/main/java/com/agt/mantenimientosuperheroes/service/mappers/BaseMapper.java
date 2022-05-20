@@ -2,8 +2,8 @@ package com.agt.mantenimientosuperheroes.service.mappers;
 
 import org.mapstruct.Mapper;
 
-import com.agt.mantenimientosuperheroes.data.dto.BaseDto;
-import com.agt.mantenimientosuperheroes.data.entities.BaseEntity;
+import com.agt.mantenimientosuperheroes.service.data.dto.BaseDto;
+import com.agt.mantenimientosuperheroes.service.data.entities.BaseEntity;
 
 /**
  * Base interface for all mappers with methods to map entity to dto and viceversa.
