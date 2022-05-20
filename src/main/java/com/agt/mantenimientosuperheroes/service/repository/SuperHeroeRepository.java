@@ -21,7 +21,7 @@ public interface SuperHeroeRepository extends JpaRepository<SuperHero, Integer> 
 	 * SELECT name FROM superheroes WHERE name LIKE '%man%';
 	 * 
 	 * @param name the characters to find the entity
-	 * @return a {@link List} with the entity that starts with the provided string.
+	 * @return a {@link List} with the entities that starts with the provided string.
 	 */
 	List<SuperHero> findByNameContaining(String name);
 

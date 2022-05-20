@@ -21,7 +21,7 @@ public final class SuperHero extends BaseEntity {
 	@Column(name = "company")
 	private String company;
 	
-	@Column(name = "Comics")
+	@Column(name = "comics")
 	private Integer comics;
 	
 	/**
@@ -49,6 +49,10 @@ public final class SuperHero extends BaseEntity {
 	
 	public Integer getId() {
 		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getName() {

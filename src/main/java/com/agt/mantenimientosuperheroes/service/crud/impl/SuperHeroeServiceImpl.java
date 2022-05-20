@@ -13,7 +13,6 @@ import com.agt.mantenimientosuperheroes.service.data.entities.SuperHero;
 
 import static com.agt.mantenimientosuperheroes.service.mappers.SuperHeroesMapper.SUPER_HEROE_MAPPER_INSTANCE;
 
-import com.agt.mantenimientosuperheroes.service.crud.BaseDbService;
 import com.agt.mantenimientosuperheroes.service.crud.definition.SuperHeroService;
 import com.agt.mantenimientosuperheroes.service.repository.SuperHeroeRepository;
 
@@ -46,6 +45,18 @@ public final class SuperHeroeServiceImpl implements SuperHeroService {
 		
 		return SUPER_HEROE_MAPPER_INSTANCE.toDto(repo.getReferenceById(id));
 	}
+	
+	@Override
+	public List<SuperHeroDto> getByNameContaining(String name){
+		
+		List<SuperHeroDto> dtoLst = new ArrayList<>();
+		
+		var entityLst = repo.findByNameContaining(name);
+		
+		dtoLst = entityLst.stream().map(SUPER_HEROE_MAPPER_INSTANCE::toDto).collect(Collectors.toList());
+		
+		return dtoLst;
+	}
 
 	@Override
 	public Integer save(SuperHero entity) {
@@ -76,7 +87,7 @@ public final class SuperHeroeServiceImpl implements SuperHeroService {
 	}
 
 	@Override
-	public boolean delete(Integer id) {
+	public boolean deleteById(Integer id) {
 		
 		boolean isDeleted = false;
 		

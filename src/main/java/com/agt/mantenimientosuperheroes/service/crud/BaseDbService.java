@@ -51,7 +51,7 @@ public interface BaseDbService <E extends BaseEntity, D extends BaseDto> {
 	 * @return true if the operation was completed successfully, otherwise false.
 	 * @throws IllegalArgumentException if the id is null.
 	 */
-	boolean delete(Integer id) throws IllegalArgumentException;
+	boolean deleteById(Integer id) throws IllegalArgumentException;
 	
 	/**
 	 * Deletes all content from the database.

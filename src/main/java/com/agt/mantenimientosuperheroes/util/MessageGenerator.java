@@ -22,14 +22,25 @@ public final class MessageGenerator {
 	}
 	
 	/**
-	 * Creates a new {@link ResponseMessage} instance with a given message, optionalParameter a bookLst.
+	 * Creates a new {@link ResponseMessage} instance with a given message, optionalParameter a superheroesDtoLst.
 	 * @param message the message to report.
 	 * @param optionalParameter a name or id of determinate object.
-	 * @param bookLst the {@link List} of {@link BookDto} to show in the {@link ResponseEntity}.
+	 * @param superheroesDtoLst the {@link List} of {@link SuperHeroDto} to show in the {@link ResponseEntity}.
 	 * @return the {@link ResponseMessage} with the given parameters.
 	 */
 	public static ResponseMessage generateMessage(String message, String optionalParameter, List<SuperHeroDto> superheroesDtoLst) {
 		return new ResponseMessage(message, optionalParameter, superheroesDtoLst);
+	}
+	
+	/**
+	 * Creates a new {@link ResponseMessage} instance with a given message, optionalParameter a superheroesDtoLst.
+	 * @param message the message to report.
+	 * @param optionalParameter a name or id of determinate object.
+	 * @param entityId the id of the entity saved or updated.
+	 * @return the {@link ResponseMessage} with the given parameters.
+	 */
+	public static ResponseMessage generateMessage(String message, String optionalParameter, Integer entityId) {
+		return new ResponseMessage(message, optionalParameter, entityId);
 	}
 	
 	/**
