@@ -10,5 +10,9 @@ import com.agt.mantenimientosuperheroes.data.entities.SuperHeroe;
 public final class SuperHeroeDto extends BaseDto {
 	
 	//TODO: Complete this class
+	
+	private String name;
+	
+	public SuperHeroeDto() {}
 
 }

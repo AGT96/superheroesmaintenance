@@ -1,5 +1,6 @@
 package com.agt.mantenimientosuperheroes.data.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -12,5 +13,10 @@ import javax.persistence.Table;
 public final class SuperHeroe extends BaseEntity {
 	
 	//TODO: Complete this class
+	
+	@Column(name = "name", nullable = false)
+	private String name;
+	
+	public SuperHeroe() {}
 
 }
