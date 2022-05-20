@@ -18,4 +18,6 @@ public final class Constants {
 	
 	public static final String NOTHING_TO_SHOW = "Nothing to show";
 	public static final String ALL_ITEMS_DELETED = "All items deleted";
+	
+	public static final String ID_MUST_NOT_BE_NULL = "Id must not be null";
 }

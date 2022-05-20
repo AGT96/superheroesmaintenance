@@ -1,4 +1,4 @@
-package com.agt.mantenimientosuperheroes.service;
+package com.agt.mantenimientosuperheroes.service.crud;
 
 import java.util.List;
 
@@ -22,28 +22,36 @@ public interface BaseDbService <E extends BaseEntity, D extends BaseDto> {
 	List<D> getAllContent();
 	
 	/**
-	 * Saves the content to database.
-	 * 
-	 * @param entityList The list of entities, may contain one or more elements.
-	 * @return true if the operation was completed successfully, otherwise false.
+	 * Get a entity by id and return as dto.
+	 * @param id the id of the entity.
+	 * @return a dto converted of his entity if found.
 	 */
-	boolean save(List<E> entityList);
+	D getById(Integer id);
+	
+	/**
+	 * Saves the entity to database.
+	 * 
+	 * @param entity the entity to be save.
+	 * @return the id of the entity if the operation was completed successfully, otherwise false.
+	 */
+	Integer save(E entity);
 	
 	/**
 	 * Updates a existing entity from the database.
 	 * 
 	 * @param entity the entity to be updated.
-	 * @return true if the operation was completed successfully, otherwise false.
+	 * @return the id of the entity the operation was completed successfully, otherwise false.
 	 */
-	boolean update(E entity);
+	Integer update(E entity);
 	
 	/**
 	 * Deletes a existing entity from the database.
 	 * 
-	 * @param entity the entity to be deleted.
+	 * @param id the entity id to be deleted.
 	 * @return true if the operation was completed successfully, otherwise false.
+	 * @throws IllegalArgumentException if the id is null.
 	 */
-	boolean delete(E entity);
+	boolean delete(Integer id) throws IllegalArgumentException;
 	
 	/**
 	 * Deletes all content from the database.

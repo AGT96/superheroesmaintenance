@@ -8,8 +8,5 @@ public class BaseDto {
 	
 	protected Integer id;
 	
-	protected BaseDto() {
-		
-	}
-
+	protected BaseDto(){}
 }

@@ -1,4 +1,4 @@
-package com.agt.mantenimientosuperheroes.mappers;
+package com.agt.mantenimientosuperheroes.service.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

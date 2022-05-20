@@ -17,8 +17,5 @@ public class BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
 	
-	protected BaseEntity() {
-		
-	}
-
+	protected BaseEntity(){}
 }

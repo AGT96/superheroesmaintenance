@@ -15,10 +15,11 @@ import com.agt.mantenimientosuperheroes.data.entities.SuperHeroe;
 public interface SuperHeroeRepository extends JpaRepository<SuperHeroe, Integer> {
 	
 	/**
-	 * Finds a {@link SuperHeroe} entities that starts on characters.
+	 * Finds a {@link SuperHeroe} entities that starts with specific characters.
 	 * This is the the same as in sql:
 	 * 
 	 * SELECT name FROM superheroes WHERE name LIKE '%man%';
+	 * 
 	 * @param name the characters to find the entity
 	 * @return a {@link List} with the entity that starts with the provided string.
 	 */
