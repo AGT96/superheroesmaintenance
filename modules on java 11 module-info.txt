@@ -1,3 +1,5 @@
+To work with java 11 module system, create module-info.java and add this content.
+
 module superheroesmaintenance {
 	exports com.agt.mantenimientosuperheroes.config;
 
